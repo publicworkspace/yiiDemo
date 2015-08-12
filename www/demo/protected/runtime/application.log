@@ -1,0 +1,530 @@
+2015/08/10 05:43:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "message".' in G:\05.php\02.workspace\yii\framework\web\CController.php:483
+Stack trace:
+#0 G:\05.php\02.workspace\yii\framework\web\CController.php(270): CController->missingAction('message')
+#1 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(282): CController->run('message')
+#2 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/message')
+#3 G:\05.php\02.workspace\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 G:\05.php\02.workspace\yii\www\demo\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=site/message
+---
+2015/08/10 06:24:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in G:\05.php\02.workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii')
+#1 G:\05.php\02.workspace\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\05.php\02.workspace\yii\www\demo\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=gii
+---
+2015/08/10 06:39:52 [error] [exception.CException] exception 'CException' with message 'Alias "Project.php" is invalid. Make sure it points to an existing directory or file.' in G:\05.php\02.workspace\yii\framework\YiiBase.php:348
+Stack trace:
+#0 G:\05.php\02.workspace\yii\framework\gii\generators\crud\CrudCode.php(59): YiiBase::import('Project.php', true)
+#1 G:\05.php\02.workspace\yii\framework\validators\CInlineValidator.php(42): CrudCode->validateModel('model', Array)
+#2 G:\05.php\02.workspace\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(CrudCode), 'model')
+#3 G:\05.php\02.workspace\yii\framework\base\CModel.php(159): CValidator->validate(Object(CrudCode), NULL)
+#4 G:\05.php\02.workspace\yii\framework\gii\CCodeGenerator.php(159): CModel->validate()
+#5 G:\05.php\02.workspace\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#6 G:\05.php\02.workspace\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#7 G:\05.php\02.workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 G:\05.php\02.workspace\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 G:\05.php\02.workspace\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#11 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/crud/index')
+#12 G:\05.php\02.workspace\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 G:\05.php\02.workspace\yii\www\demo\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://127.0.0.1/index.php?r=gii/crud/index
+---
+2015/08/10 06:42:37 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '' for column 'create_time' at row 1. The SQL statement executed was: INSERT INTO `tbl_project` (`name`, `description`, `create_time`, `create_user_id`, `update_time`, `update_user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5).
+in G:\05.php\02.workspace\yii\www\demo\protected\controllers\ProjectController.php (73)
+in G:\05.php\02.workspace\yii\www\demo\index.php (13)
+2015/08/10 06:42:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '' for column 'create_time' at row 1. The SQL statement executed was: INSERT INTO `tbl_project` (`name`, `description`, `create_time`, `create_user_id`, `update_time`, `update_user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5)' in G:\05.php\02.workspace\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 G:\05.php\02.workspace\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 G:\05.php\02.workspace\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 G:\05.php\02.workspace\yii\www\demo\protected\controllers\ProjectController.php(73): CActiveRecord->save()
+#3 G:\05.php\02.workspace\yii\framework\web\actions\CInlineAction.php(49): ProjectController->actionCreate()
+#4 G:\05.php\02.workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 G:\05.php\02.workspace\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 G:\05.php\02.workspace\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 G:\05.php\02.workspace\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 G:\05.php\02.workspace\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 G:\05.php\02.workspace\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('project/create')
+#14 G:\05.php\02.workspace\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 G:\05.php\02.workspace\yii\www\demo\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=project/create
+HTTP_REFERER=http://127.0.0.1/index.php?r=project/create
+---
+2015/08/10 06:43:04 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '' for column 'create_time' at row 1. The SQL statement executed was: INSERT INTO `tbl_project` (`name`, `description`, `create_time`, `create_user_id`, `update_time`, `update_user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5).
+in G:\05.php\02.workspace\yii\www\demo\protected\controllers\ProjectController.php (73)
+in G:\05.php\02.workspace\yii\www\demo\index.php (13)
+2015/08/10 06:43:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '' for column 'create_time' at row 1. The SQL statement executed was: INSERT INTO `tbl_project` (`name`, `description`, `create_time`, `create_user_id`, `update_time`, `update_user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5)' in G:\05.php\02.workspace\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 G:\05.php\02.workspace\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 G:\05.php\02.workspace\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 G:\05.php\02.workspace\yii\www\demo\protected\controllers\ProjectController.php(73): CActiveRecord->save()
+#3 G:\05.php\02.workspace\yii\framework\web\actions\CInlineAction.php(49): ProjectController->actionCreate()
+#4 G:\05.php\02.workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 G:\05.php\02.workspace\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 G:\05.php\02.workspace\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 G:\05.php\02.workspace\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 G:\05.php\02.workspace\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 G:\05.php\02.workspace\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('project/create')
+#14 G:\05.php\02.workspace\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 G:\05.php\02.workspace\yii\www\demo\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=project/create
+HTTP_REFERER=http://127.0.0.1/index.php?r=project/create
+---
+2015/08/10 06:44:18 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '' for column 'create_time' at row 1. The SQL statement executed was: INSERT INTO `tbl_project` (`name`, `description`, `create_time`, `create_user_id`, `update_time`, `update_user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5).
+in G:\05.php\02.workspace\yii\www\demo\protected\controllers\ProjectController.php (73)
+in G:\05.php\02.workspace\yii\www\demo\index.php (13)
+2015/08/10 06:44:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '' for column 'create_time' at row 1. The SQL statement executed was: INSERT INTO `tbl_project` (`name`, `description`, `create_time`, `create_user_id`, `update_time`, `update_user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5)' in G:\05.php\02.workspace\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 G:\05.php\02.workspace\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 G:\05.php\02.workspace\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 G:\05.php\02.workspace\yii\www\demo\protected\controllers\ProjectController.php(73): CActiveRecord->save()
+#3 G:\05.php\02.workspace\yii\framework\web\actions\CInlineAction.php(49): ProjectController->actionCreate()
+#4 G:\05.php\02.workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 G:\05.php\02.workspace\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 G:\05.php\02.workspace\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 G:\05.php\02.workspace\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 G:\05.php\02.workspace\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 G:\05.php\02.workspace\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('project/create')
+#14 G:\05.php\02.workspace\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 G:\05.php\02.workspace\yii\www\demo\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=project/create
+HTTP_REFERER=http://127.0.0.1/index.php?r=project/create
+---
+2015/08/10 06:48:02 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '' for column 'create_time' at row 1. The SQL statement executed was: INSERT INTO `tbl_project` (`name`, `description`, `create_time`, `create_user_id`, `update_time`, `update_user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5).
+in G:\05.php\02.workspace\yii\www\demo\protected\controllers\ProjectController.php (88)
+in G:\05.php\02.workspace\yii\www\demo\index.php (13)
+2015/08/10 06:48:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '' for column 'create_time' at row 1. The SQL statement executed was: INSERT INTO `tbl_project` (`name`, `description`, `create_time`, `create_user_id`, `update_time`, `update_user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5)' in G:\05.php\02.workspace\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 G:\05.php\02.workspace\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 G:\05.php\02.workspace\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 G:\05.php\02.workspace\yii\www\demo\protected\controllers\ProjectController.php(88): CActiveRecord->save()
+#3 G:\05.php\02.workspace\yii\framework\web\actions\CInlineAction.php(49): ProjectController->actionCreate()
+#4 G:\05.php\02.workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 G:\05.php\02.workspace\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 G:\05.php\02.workspace\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 G:\05.php\02.workspace\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 G:\05.php\02.workspace\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 G:\05.php\02.workspace\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('project/create')
+#14 G:\05.php\02.workspace\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 G:\05.php\02.workspace\yii\www\demo\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=project/create
+HTTP_REFERER=http://127.0.0.1/index.php?r=project/create
+---
+2015/08/10 06:49:08 [error] [php] array_map(): Argument #2 should be an array (G:\05.php\02.workspace\yii\framework\web\auth\CAccessControlFilter.php:115)
+Stack trace:
+#0 G:\05.php\02.workspace\yii\framework\web\filters\CInlineFilter.php(58): ProjectController->filterAccessControl()
+#1 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#2 G:\05.php\02.workspace\yii\framework\web\CController.php(291): CFilterChain->run()
+#3 G:\05.php\02.workspace\yii\framework\web\CController.php(265): ProjectController->runActionWithFilters()
+#4 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(282): ProjectController->run()
+#5 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 G:\05.php\02.workspace\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#7 G:\05.php\02.workspace\yii\www\demo\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=project/create
+in G:\05.php\02.workspace\yii\www\demo\index.php (13)
+2015/08/10 06:49:17 [error] [php] array_map(): Argument #2 should be an array (G:\05.php\02.workspace\yii\framework\web\auth\CAccessControlFilter.php:115)
+Stack trace:
+#0 G:\05.php\02.workspace\yii\framework\web\filters\CInlineFilter.php(58): ProjectController->filterAccessControl()
+#1 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#2 G:\05.php\02.workspace\yii\framework\web\CController.php(291): CFilterChain->run()
+#3 G:\05.php\02.workspace\yii\framework\web\CController.php(265): ProjectController->runActionWithFilters()
+#4 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(282): ProjectController->run()
+#5 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 G:\05.php\02.workspace\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#7 G:\05.php\02.workspace\yii\www\demo\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=project/create
+in G:\05.php\02.workspace\yii\www\demo\index.php (13)
+2015/08/10 06:49:27 [error] [php] array_map(): Argument #2 should be an array (G:\05.php\02.workspace\yii\framework\web\auth\CAccessControlFilter.php:115)
+Stack trace:
+#0 G:\05.php\02.workspace\yii\framework\web\filters\CInlineFilter.php(58): ProjectController->filterAccessControl()
+#1 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#2 G:\05.php\02.workspace\yii\framework\web\CController.php(291): CFilterChain->run()
+#3 G:\05.php\02.workspace\yii\framework\web\CController.php(265): ProjectController->runActionWithFilters()
+#4 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(282): ProjectController->run()
+#5 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 G:\05.php\02.workspace\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#7 G:\05.php\02.workspace\yii\www\demo\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=project/
+in G:\05.php\02.workspace\yii\www\demo\index.php (13)
+2015/08/10 06:56:03 [warning] [application] Failed to set unsafe attribute "description" of "Project".
+in G:\05.php\02.workspace\yii\www\demo\protected\controllers\ProjectController.php (72)
+in G:\05.php\02.workspace\yii\www\demo\index.php (13)
+2015/08/10 06:56:03 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '' for column 'update_time' at row 1. The SQL statement executed was: INSERT INTO `tbl_project` (`name`, `create_time`, `create_user_id`, `update_time`, `update_user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in G:\05.php\02.workspace\yii\www\demo\protected\controllers\ProjectController.php (73)
+in G:\05.php\02.workspace\yii\www\demo\index.php (13)
+2015/08/10 06:56:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '' for column 'update_time' at row 1. The SQL statement executed was: INSERT INTO `tbl_project` (`name`, `create_time`, `create_user_id`, `update_time`, `update_user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in G:\05.php\02.workspace\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 G:\05.php\02.workspace\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 G:\05.php\02.workspace\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 G:\05.php\02.workspace\yii\www\demo\protected\controllers\ProjectController.php(73): CActiveRecord->save()
+#3 G:\05.php\02.workspace\yii\framework\web\actions\CInlineAction.php(49): ProjectController->actionCreate()
+#4 G:\05.php\02.workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 G:\05.php\02.workspace\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 G:\05.php\02.workspace\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 G:\05.php\02.workspace\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 G:\05.php\02.workspace\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 G:\05.php\02.workspace\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('project/create')
+#14 G:\05.php\02.workspace\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 G:\05.php\02.workspace\yii\www\demo\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=project/create
+HTTP_REFERER=http://127.0.0.1/index.php?r=project/create
+---
+2015/08/10 06:56:42 [warning] [application] Failed to set unsafe attribute "description" of "Project".
+in G:\05.php\02.workspace\yii\www\demo\protected\controllers\ProjectController.php (72)
+in G:\05.php\02.workspace\yii\www\demo\index.php (13)
+2015/08/10 06:57:54 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in G:\05.php\02.workspace\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 G:\05.php\02.workspace\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 G:\05.php\02.workspace\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 G:\05.php\02.workspace\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 G:\05.php\02.workspace\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 G:\05.php\02.workspace\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 G:\05.php\02.workspace\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('project/admin')
+#9 G:\05.php\02.workspace\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 G:\05.php\02.workspace\yii\www\demo\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=project/admin
+HTTP_REFERER=http://127.0.0.1/index.php?r=project/index
+---
+2015/08/10 07:35:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "list".' in G:\05.php\02.workspace\yii\framework\web\CController.php:483
+Stack trace:
+#0 G:\05.php\02.workspace\yii\framework\web\CController.php(270): CController->missingAction('list')
+#1 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(282): CController->run('list')
+#2 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/list')
+#3 G:\05.php\02.workspace\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 G:\05.php\02.workspace\yii\www\demo\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=issue/list
+---
+2015/08/10 07:36:04 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '' for column 'create_time' at row 1. The SQL statement executed was: INSERT INTO `tbl_issue` (`name`, `description`, `project_id`, `type_id`, `status_id`, `owner_id`, `requester_id`, `create_time`, `create_user_id`, `update_time`, `update_user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10).
+in G:\05.php\02.workspace\yii\www\demo\protected\controllers\IssueController.php (73)
+in G:\05.php\02.workspace\yii\www\demo\index.php (13)
+2015/08/10 07:36:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '' for column 'create_time' at row 1. The SQL statement executed was: INSERT INTO `tbl_issue` (`name`, `description`, `project_id`, `type_id`, `status_id`, `owner_id`, `requester_id`, `create_time`, `create_user_id`, `update_time`, `update_user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)' in G:\05.php\02.workspace\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 G:\05.php\02.workspace\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 G:\05.php\02.workspace\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 G:\05.php\02.workspace\yii\www\demo\protected\controllers\IssueController.php(73): CActiveRecord->save()
+#3 G:\05.php\02.workspace\yii\framework\web\actions\CInlineAction.php(49): IssueController->actionCreate()
+#4 G:\05.php\02.workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 G:\05.php\02.workspace\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 G:\05.php\02.workspace\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 G:\05.php\02.workspace\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 G:\05.php\02.workspace\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 G:\05.php\02.workspace\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/create')
+#14 G:\05.php\02.workspace\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 G:\05.php\02.workspace\yii\www\demo\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=issue/create
+HTTP_REFERER=http://127.0.0.1/index.php?r=issue/create
+---
+2015/08/10 07:55:03 [error] [php] Trying to get property of non-object (G:\05.php\02.workspace\yii\www\demo\protected\controllers\IssueController.php:66)
+Stack trace:
+#0 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(133): IssueController->runAction()
+#1 G:\05.php\02.workspace\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 G:\05.php\02.workspace\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 G:\05.php\02.workspace\yii\framework\web\filters\CInlineFilter.php(58): IssueController->filterAccessControl()
+#4 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 G:\05.php\02.workspace\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 G:\05.php\02.workspace\yii\framework\web\CController.php(265): IssueController->runActionWithFilters()
+#7 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(282): IssueController->run()
+#8 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 G:\05.php\02.workspace\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 G:\05.php\02.workspace\yii\www\demo\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=issue/create&pid=1
+in G:\05.php\02.workspace\yii\www\demo\protected\controllers\IssueController.php (66)
+in G:\05.php\02.workspace\yii\www\demo\index.php (13)
+2015/08/10 07:57:50 [error] [php] Undefined variable: issueDataProvider (G:\05.php\02.workspace\yii\www\demo\protected\views\project\_view.php:39)
+Stack trace:
+#0 G:\05.php\02.workspace\yii\framework\zii\widgets\CListView.php(291): ProjectController->renderFile()
+#1 G:\05.php\02.workspace\yii\framework\zii\widgets\CBaseListView.php(181): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 G:\05.php\02.workspace\yii\framework\zii\widgets\CBaseListView.php(164): preg_replace_callback()
+#4 G:\05.php\02.workspace\yii\framework\zii\widgets\CBaseListView.php(149): CListView->renderContent()
+#5 G:\05.php\02.workspace\yii\framework\web\CBaseController.php(181): CListView->run()
+#6 G:\05.php\02.workspace\yii\www\demo\protected\views\project\index.php(20): ProjectController->widget()
+#7 G:\05.php\02.workspace\yii\framework\web\CBaseController.php(126): require()
+#8 G:\05.php\02.workspace\yii\framework\web\CBaseController.php(95): ProjectController->renderInternal()
+#9 G:\05.php\02.workspace\yii\framework\web\CController.php(869): ProjectController->renderFile()
+#10 G:\05.php\02.workspace\yii\framework\web\CController.php(782): ProjectController->renderPartial()
+#11 G:\05.php\02.workspace\yii\www\demo\protected\controllers\ProjectController.php(138): ProjectController->render()
+#12 G:\05.php\02.workspace\yii\framework\web\actions\CInlineAction.php(49): ProjectController->actionIndex()
+#13 G:\05.php\02.workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(133): ProjectController->runAction()
+#15 G:\05.php\02.workspace\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 G:\05.php\02.workspace\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#17 G:\05.php\02.workspace\yii\framework\web\filters\CInlineFilter.php(58): ProjectController->filterAccessControl()
+#18 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#19 G:\05.php\02.workspace\yii\framework\web\CController.php(291): CFilterChain->run()
+#20 G:\05.php\02.workspace\yii\framework\web\CController.php(265): ProjectController->runActionWithFilters()
+#21 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(282): ProjectController->run()
+#22 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#23 G:\05.php\02.workspace\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#24 G:\05.php\02.workspace\yii\www\demo\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=project
+in G:\05.php\02.workspace\yii\www\demo\protected\views\project\_view.php (39)
+in G:\05.php\02.workspace\yii\www\demo\protected\views\project\index.php (20)
+in G:\05.php\02.workspace\yii\www\demo\protected\controllers\ProjectController.php (138)
+2015/08/10 08:23:00 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in G:\05.php\02.workspace\yii\framework\web\CController.php:1118
+Stack trace:
+#0 G:\05.php\02.workspace\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 G:\05.php\02.workspace\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 G:\05.php\02.workspace\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 G:\05.php\02.workspace\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 G:\05.php\02.workspace\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 G:\05.php\02.workspace\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#9 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/create')
+#10 G:\05.php\02.workspace\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 G:\05.php\02.workspace\yii\www\demo\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=issue/create&pid=1
+HTTP_REFERER=http://127.0.0.1/index.php?r=issue/
+---
+2015/08/10 08:27:56 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in G:\05.php\02.workspace\yii\framework\web\CController.php:1118
+Stack trace:
+#0 G:\05.php\02.workspace\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 G:\05.php\02.workspace\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 G:\05.php\02.workspace\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 G:\05.php\02.workspace\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 G:\05.php\02.workspace\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 G:\05.php\02.workspace\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#9 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/create')
+#10 G:\05.php\02.workspace\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 G:\05.php\02.workspace\yii\www\demo\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=issue/create&pid=1
+HTTP_REFERER=http://127.0.0.1/index.php?r=project/view&id=1
+---
+2015/08/10 08:28:31 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in G:\05.php\02.workspace\yii\framework\web\CController.php:1118
+Stack trace:
+#0 G:\05.php\02.workspace\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 G:\05.php\02.workspace\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 G:\05.php\02.workspace\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 G:\05.php\02.workspace\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 G:\05.php\02.workspace\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 G:\05.php\02.workspace\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#9 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/create')
+#10 G:\05.php\02.workspace\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 G:\05.php\02.workspace\yii\www\demo\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=issue/create&pid=1
+HTTP_REFERER=http://127.0.0.1/index.php?r=project/view&id=1
+---
+2015/08/10 08:44:36 [error] [exception.CException] exception 'CException' with message 'Property "User.create_time" is not defined.' in G:\05.php\02.workspace\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 G:\05.php\02.workspace\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('create_time', Object(CDbExpression))
+#1 G:\05.php\02.workspace\yii\www\demo\protected\models\TrackStarActiveRecord.php(20): CActiveRecord->__set('create_time', Object(CDbExpression))
+#2 G:\05.php\02.workspace\yii\framework\base\CModel.php(156): TrackStarActiveRecord->beforeValidate()
+#3 G:\05.php\02.workspace\yii\framework\db\ar\CActiveRecord.php(808): CModel->validate(NULL)
+#4 G:\05.php\02.workspace\yii\www\demo\protected\controllers\UserController.php(73): CActiveRecord->save()
+#5 G:\05.php\02.workspace\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#6 G:\05.php\02.workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 G:\05.php\02.workspace\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 G:\05.php\02.workspace\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 G:\05.php\02.workspace\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 G:\05.php\02.workspace\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 G:\05.php\02.workspace\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#15 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/create')
+#16 G:\05.php\02.workspace\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 G:\05.php\02.workspace\yii\www\demo\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/index.php?r=user/create
+HTTP_REFERER=http://127.0.0.1/index.php?r=user/create
+---
+2015/08/10 08:44:47 [error] [exception.CException] exception 'CException' with message 'Property "User.create_time" is not defined.' in G:\05.php\02.workspace\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 G:\05.php\02.workspace\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('create_time', Object(CDbExpression))
+#1 G:\05.php\02.workspace\yii\www\demo\protected\models\TrackStarActiveRecord.php(20): CActiveRecord->__set('create_time', Object(CDbExpression))
+#2 G:\05.php\02.workspace\yii\framework\base\CModel.php(156): TrackStarActiveRecord->beforeValidate()
+#3 G:\05.php\02.workspace\yii\framework\db\ar\CActiveRecord.php(808): CModel->validate(NULL)
+#4 G:\05.php\02.workspace\yii\www\demo\protected\controllers\UserController.php(73): CActiveRecord->save()
+#5 G:\05.php\02.workspace\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#6 G:\05.php\02.workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 G:\05.php\02.workspace\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 G:\05.php\02.workspace\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 G:\05.php\02.workspace\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 G:\05.php\02.workspace\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 G:\05.php\02.workspace\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#15 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/create')
+#16 G:\05.php\02.workspace\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 G:\05.php\02.workspace\yii\www\demo\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/index.php?r=user/create
+HTTP_REFERER=http://127.0.0.1/index.php?r=user/create
+---
+2015/08/10 09:07:42 [error] [php] Use of undefined constant username - assumed 'username' (G:\05.php\02.workspace\yii\www\demo\protected\components\UserIdentity.php:21)
+Stack trace:
+#0 G:\05.php\02.workspace\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute()
+#1 G:\05.php\02.workspace\yii\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 G:\05.php\02.workspace\yii\www\demo\protected\controllers\SiteController.php(94): LoginForm->validate()
+#3 G:\05.php\02.workspace\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 G:\05.php\02.workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 G:\05.php\02.workspace\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 G:\05.php\02.workspace\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 G:\05.php\02.workspace\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 G:\05.php\02.workspace\yii\www\demo\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=site/login
+in G:\05.php\02.workspace\yii\www\demo\protected\components\UserIdentity.php (21)
+in G:\05.php\02.workspace\yii\www\demo\protected\models\LoginForm.php (52)
+in G:\05.php\02.workspace\yii\www\demo\protected\controllers\SiteController.php (94)
+2015/08/10 09:08:03 [error] [php] Use of undefined constant username - assumed 'username' (G:\05.php\02.workspace\yii\www\demo\protected\components\UserIdentity.php:21)
+Stack trace:
+#0 G:\05.php\02.workspace\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute()
+#1 G:\05.php\02.workspace\yii\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 G:\05.php\02.workspace\yii\www\demo\protected\controllers\SiteController.php(94): LoginForm->validate()
+#3 G:\05.php\02.workspace\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 G:\05.php\02.workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 G:\05.php\02.workspace\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 G:\05.php\02.workspace\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 G:\05.php\02.workspace\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 G:\05.php\02.workspace\yii\www\demo\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=site/login
+in G:\05.php\02.workspace\yii\www\demo\protected\components\UserIdentity.php (21)
+in G:\05.php\02.workspace\yii\www\demo\protected\models\LoginForm.php (52)
+in G:\05.php\02.workspace\yii\www\demo\protected\controllers\SiteController.php (94)
+2015/08/10 09:15:11 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1364 Field 'last_login_time' doesn't have a default value. The SQL statement executed was: INSERT INTO `tbl_user` (`username`, `password`, `email`, `update_time`, `create_time`, `update_user_id`, `create_user_id`) VALUES (:yp0, :yp1, :yp2, NOW(), NOW(), :yp3, :yp4).
+in G:\05.php\02.workspace\yii\www\demo\protected\controllers\UserController.php (73)
+in G:\05.php\02.workspace\yii\www\demo\index.php (13)
+2015/08/10 09:15:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 1364 Field 'last_login_time' doesn't have a default value. The SQL statement executed was: INSERT INTO `tbl_user` (`username`, `password`, `email`, `update_time`, `create_time`, `update_user_id`, `create_user_id`) VALUES (:yp0, :yp1, :yp2, NOW(), NOW(), :yp3, :yp4)' in G:\05.php\02.workspace\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 G:\05.php\02.workspace\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 G:\05.php\02.workspace\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 G:\05.php\02.workspace\yii\www\demo\protected\controllers\UserController.php(73): CActiveRecord->save()
+#3 G:\05.php\02.workspace\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#4 G:\05.php\02.workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 G:\05.php\02.workspace\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 G:\05.php\02.workspace\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 G:\05.php\02.workspace\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 G:\05.php\02.workspace\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 G:\05.php\02.workspace\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/create')
+#14 G:\05.php\02.workspace\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 G:\05.php\02.workspace\yii\www\demo\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=user/create
+HTTP_REFERER=http://127.0.0.1/index.php?r=user/create
+---
+2015/08/10 09:22:06 [error] [php] Object of class UserIdentity could not be converted to string (G:\05.php\02.workspace\yii\www\demo\protected\components\UserIdentity.php:21)
+Stack trace:
+#0 G:\05.php\02.workspace\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute()
+#1 G:\05.php\02.workspace\yii\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 G:\05.php\02.workspace\yii\www\demo\protected\controllers\SiteController.php(94): LoginForm->validate()
+#3 G:\05.php\02.workspace\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 G:\05.php\02.workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 G:\05.php\02.workspace\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 G:\05.php\02.workspace\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 G:\05.php\02.workspace\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 G:\05.php\02.workspace\yii\www\demo\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=site/login
+in G:\05.php\02.workspace\yii\www\demo\protected\components\UserIdentity.php (21)
+in G:\05.php\02.workspace\yii\www\demo\protected\models\LoginForm.php (52)
+in G:\05.php\02.workspace\yii\www\demo\protected\controllers\SiteController.php (94)
+2015/08/10 09:22:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "user".' in G:\05.php\02.workspace\yii\framework\web\CController.php:483
+Stack trace:
+#0 G:\05.php\02.workspace\yii\framework\web\CController.php(270): CController->missingAction('user')
+#1 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(282): CController->run('user')
+#2 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/user')
+#3 G:\05.php\02.workspace\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 G:\05.php\02.workspace\yii\www\demo\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=site/user
+---
+2015/08/10 09:30:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "user".' in G:\05.php\02.workspace\yii\framework\web\CController.php:483
+Stack trace:
+#0 G:\05.php\02.workspace\yii\framework\web\CController.php(270): CController->missingAction('user')
+#1 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(282): CController->run('user')
+#2 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/user')
+#3 G:\05.php\02.workspace\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 G:\05.php\02.workspace\yii\www\demo\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=site/user
+---
+2015/08/12 07:31:24 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'demo.tbl_s' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_s`.
+in G:\05.php\02.workspace\yii\www\demo\index.php (13)
+2015/08/12 16:40:44 [error] [php] Undefined variable: query (G:\05.php\02.workspace\yii\www\demo\protected\views\salary\_form.php:31)
+Stack trace:
+#0 G:\05.php\02.workspace\yii\framework\web\CController.php(869): SalaryController->renderFile()
+#1 G:\05.php\02.workspace\yii\www\demo\protected\views\salary\create.php(18): SalaryController->renderPartial()
+#2 G:\05.php\02.workspace\yii\framework\web\CBaseController.php(126): require()
+#3 G:\05.php\02.workspace\yii\framework\web\CBaseController.php(95): SalaryController->renderInternal()
+#4 G:\05.php\02.workspace\yii\framework\web\CController.php(869): SalaryController->renderFile()
+#5 G:\05.php\02.workspace\yii\framework\web\CController.php(782): SalaryController->renderPartial()
+#6 G:\05.php\02.workspace\yii\www\demo\protected\controllers\SalaryController.php(79): SalaryController->render()
+#7 G:\05.php\02.workspace\yii\framework\web\actions\CInlineAction.php(49): SalaryController->actionCreate()
+#8 G:\05.php\02.workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(133): SalaryController->runAction()
+#10 G:\05.php\02.workspace\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 G:\05.php\02.workspace\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 G:\05.php\02.workspace\yii\framework\web\filters\CInlineFilter.php(58): SalaryController->filterAccessControl()
+#13 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 G:\05.php\02.workspace\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 G:\05.php\02.workspace\yii\framework\web\CController.php(265): SalaryController->runActionWithFilters()
+#16 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(282): SalaryController->run()
+#17 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 G:\05.php\02.workspace\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#19 G:\05.php\02.workspace\yii\www\demo\index.php(13): CWebApplication->run()
+REQUEST_URI=/demo/index.php?r=salary/create
+in G:\05.php\02.workspace\yii\www\demo\protected\views\salary\_form.php (31)
+in G:\05.php\02.workspace\yii\www\demo\protected\views\salary\create.php (18)
+in G:\05.php\02.workspace\yii\www\demo\protected\controllers\SalaryController.php (79)

@@ -1,0 +1,17 @@
+2015/08/12 02:39:55 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in G:\05.php\02.workspace\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 G:\05.php\02.workspace\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 G:\05.php\02.workspace\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 G:\05.php\02.workspace\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 G:\05.php\02.workspace\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 G:\05.php\02.workspace\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 G:\05.php\02.workspace\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 G:\05.php\02.workspace\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 G:\05.php\02.workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 G:\05.php\02.workspace\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 G:\05.php\02.workspace\yii\www\xs\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/xs/index.php?r=user/admin
+HTTP_REFERER=http://127.0.0.1/xs/index.php?r=user/create
+---
