@@ -32,18 +32,21 @@
 					'language'=>'zh_cn',
 					'name'=>'salary_month',
 					'attribute'=>'salary_month',
-					'value'=>Date('Y-m-d'),
+					'value'=>Date('Y-m'),
 					'options'=>array(
 						'showAnim'=>'fold',
 						'showOn'=>'both',
 						'buttonImage'=>Yii::app()->request->baseUrl.'/images/calendar.gif',
 						'maxDate'=>'new Date()',
 						'buttonImageOnly'=>true,
-						'dateFormat'=>'yy-mm-dd',
+						'changeMonth'=> true,
+						'changeYear'=> true,
+						'dateFormat'=>'yy-mm',
+						''
 					),
 					'htmlOptions'=>array(
 						'style'=>'height:18px',
-						//'maxlength'=>8,
+						'maxlength'=>8,
 						'readonly'=>"readonly",
 					),
 				));

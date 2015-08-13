@@ -69,11 +69,27 @@ class SalaryController extends Controller
 		//应发金额
 		$model->total = $base + $subsidy;
 		//应纳税所得额
-		$model->after_tax = $base + $subsidy_1 - $deduct - 3500;
+		if( $model->total == 0 )
+		{
+			$model->after_tax = 0;
+		}else{
+			$model->after_tax = $base + $subsidy_1 - $deduct - 3500;
+		}
+
 		//个人所得税
-		$model->income_tax = $this->incomeTax($model->after_tax);
+		if($model->after_tax == 0){
+			$model->income_tax = 0;
+		}else{
+			$model->income_tax = $this->incomeTax($model->after_tax);
+		}
+
 		//实发金额
-		$model->actual = $model->total - $deduct - $model->income_tax;
+		if( $model->total == 0 ){
+			$model->actual = 0;
+		}else{
+			$model->actual = $model->total - $deduct - $model->income_tax;
+		}
+
 		//$model = Salary::model()->findBySql($sql,array(':id'=>$id));
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
