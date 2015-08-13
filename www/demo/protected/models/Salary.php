@@ -29,6 +29,10 @@
  */
 class Salary extends CActiveRecord
 {
+	public $total; //应发金额
+	public $after_tax;//应纳税所得额
+	public $income_tax;//扣个人所得税
+	public $actual;//实发金额
 	/**
 	 * @return string the associated database table name
 	 */
@@ -72,28 +76,32 @@ class Salary extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'salary_month' => 'Salary Month',
-			'job_no' => 'Job No',
-			'username' => 'Username',
-			'base_pay' => 'Base Pay',
-			'job_subsidies' => 'Job Subsidies',
-			'bonus' => 'Bonus',
-			'repair_diff' => 'Repair Diff',
-			'subsidy_tel' => 'Subsidy Tel',
-			'subsidy_traffic' => 'Subsidy Traffic',
-			'subsidy_meal' => 'Subsidy Meal',
-			'subsidy_computer' => 'Subsidy Computer',
-			'repair_subsidy' => 'Repair Subsidy',
-			'repair_cpf' => 'Repair Cpf',
-			'loan' => 'Loan',
-			'special_cpf' => 'Special Cpf',
-			'old_age_insurance' => 'Old Age Insurance',
-			'cpf' => 'Cpf',
-			'unemployment_insurance' => 'Unemployment Insurance',
-			'medical_insurance' => 'Medical Insurance',
-			'social_security_cpf' => 'Social Security Cpf',
-			'checking_in' => 'Checking In',
+			'id' => '主键',
+			'salary_month' => '月份',
+			'job_no' => '工号',
+			'username' => '姓名',
+			'base_pay' => '基本工资',
+			'job_subsidies' => '岗位津贴',
+			'bonus' => '奖金',
+			'repair_diff' => '补以前月份差异',
+			'subsidy_tel' => '电话补',
+			'subsidy_traffic' => '交通补',
+			'subsidy_meal' => '餐补',
+			'subsidy_computer' => '电脑补',
+			'repair_subsidy' => '补以前月份补贴',
+			'repair_cpf' => '补多扣公积金',
+			'loan' => '扣房租及个人借款',
+			'special_cpf' => '扣特殊公积金',
+			'old_age_insurance' => '扣养老保险',
+			'cpf' => '扣公积金',
+			'unemployment_insurance' => '扣失业保险',
+			'medical_insurance' => '扣医疗保险',
+			'social_security_cpf' => '补扣社保公积金款',
+			'checking_in' => '考勤等扣款金额',
+			'total' => '④应发金额',
+			'after_tax' => '⑤应纳税所得额',
+			'income_tax' => '⑥扣个人所得税',
+			'actual' => '⑦实发金额',
 		);
 	}
 

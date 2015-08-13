@@ -51,9 +51,39 @@ class SalaryController extends Controller
 	 */
 	public function actionView($id)
 	{
+		//$sql = "SELECT * ,(`base_pay` + `job_subsidies` + `bonus` + `repair_diff`+`subsidy_tel`+`subsidy_traffic`+`subsidy_meal`+`subsidy_computer`+`repair_subsidy`+`repair_cpf`) AS `total` FROM `tbl_salary` WHERE `id`=:id";
+		//$result = Yii::app()->db->createCommand($sql);
+		//$model = $result->queryAll();
+		//$model=Post::model()->findBySql($sql,array(':id'=>$id));
+		$model=Salary::model()->findByPk($id);
+		//工资与奖金
+		$base = $model->base_pay + $model->job_subsidies + $model->bonus + $model->repair_diff;
+		//补助
+		$subsidy = $model->subsidy_tel + $model->subsidy_traffic + $model->subsidy_meal + $model->subsidy_computer + $model->repair_subsidy + $model->repair_cpf;
+		$subsidy_1 = $model->subsidy_tel * 0.2 + $model->subsidy_traffic * 0.3 + $model->subsidy_meal + $model->subsidy_computer + $model->repair_subsidy + $model->repair_cpf;
+
+		//扣款
+		$deduct = $model->loan + $model->special_cpf + $model->old_age_insurance + $model->cpf + $model->unemployment_insurance
+			+ $model->medical_insurance + $model->social_security_cpf + $model->checking_in;
+
+		//应发金额
+		$model->total = $base + $subsidy;
+		//应纳税所得额
+		$model->after_tax = $base + $subsidy_1 - $deduct - 3500;
+		//个人所得税
+		$model->income_tax = $this->incomeTax($model->after_tax);
+		//实发金额
+		$model->actual = $model->total - $deduct - $model->income_tax;
+		//$model = Salary::model()->findBySql($sql,array(':id'=>$id));
+		if($model===null)
+			throw new CHttpException(404,'The requested page does not exist.');
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+			'model'=>$model,
 		));
+		//return $model;
+		//$this->render('view',array(
+		//	'model'=>$this->loadModel($id),
+		//));
 	}
 
 	/**
@@ -169,5 +199,23 @@ class SalaryController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+
+	public function incomeTax($money)
+	{
+		if($money <= 1500)
+			return $money * 0.03;
+		elseif($money > 1500 && $money <= 4500)
+			return $money * 0.1 - 105;
+		elseif($money > 4500 && $money <= 9000)
+			return $money * 0.2 - 555;
+		elseif($money > 9000 && $money <= 35000)
+			return $money * 0.25 - 1005;
+		elseif($money > 35000 && $money <= 55000)
+			return $money * 0.3 - 2755;
+		elseif($money > 55000 && $money <= 80000)
+			return $money * 0.35 - 5505;
+		elseif($money > 80000)
+			return $money * 0.45 - 13505;
 	}
 }
