@@ -13,3 +13,6 @@ table td{
     background-color: skyblue;
     text-align: left;
 }
+.ui-datepicker-calendar {
+    display: none;
+}
