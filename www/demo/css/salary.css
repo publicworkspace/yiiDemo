@@ -1,4 +1,15 @@
-.title{
-    bgcolor:blue;
 
+table{
+    border:1px solid #000000;
+    font-size:14px;
+}
+table td{
+    border:1px solid #000000;
+    border-collapse:collapse;
+    padding:5px 8px;
+    text-align:center;
+}
+.title{
+    background-color: skyblue;
+    text-align: left;
 }
