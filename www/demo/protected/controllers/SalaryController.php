@@ -56,6 +56,7 @@ class SalaryController extends Controller
 		//$model = $result->queryAll();
 		//$model=Post::model()->findBySql($sql,array(':id'=>$id));
 		$model=Salary::model()->findByPk($id);
+		$model->salary_month = str_replace("-","年",$model->salary_month);
 		//工资与奖金
 		$base = $model->base_pay + $model->job_subsidies + $model->bonus + $model->repair_diff;
 		//补助
