@@ -18,6 +18,7 @@ $this->menu=array(
 
 <h1>View Salary #<?php echo $model->id; ?></h1>
 
+<div style="text-align: center"><h2>恒华科技<?php echo CHtml::encode($model->salary_month); ?>月份工资条</h2></div>
 <table>
 	<tr>
 		<td><?php echo CHtml::encode($model->getAttributeLabel('job_no')); ?></td>
@@ -139,7 +140,12 @@ $this->menu=array(
 		<td colspan="2"><?php echo CHtml::encode($model->actual); ?></td>
 	</tr>
 </table>
-
+<pre>说明：
+1、④应发金额 = ① + ②；
+2、⑤应纳税所得额 =  ① + ②（电话补*20%+交通补*30%+其他补）- ③ - 个税起征点（3500）；
+3、代扣的个人所得税依据2011年9月1日实施的《个人所得税法》及实施条例计算；
+4、⑦实发金额 = ④ - ③ - ⑥；
+</pre>
 <?php
 /*$this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
