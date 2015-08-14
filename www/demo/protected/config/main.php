@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'项目管理',
+	'name'=>'恒华科技',
 	'language'=>'zh_cn',
 	'sourceLanguage'=>'en_us',
 	'timeZone' => 'Asia/Shanghai',
