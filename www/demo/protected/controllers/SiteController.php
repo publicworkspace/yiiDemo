@@ -2,10 +2,6 @@
 
 class SiteController extends Controller
 {
-	public function init()
-	{
-		Yii::app()->language = 'zh-cn';
-	}
 	/**
 	 * Declares class-based actions.
 	 */
