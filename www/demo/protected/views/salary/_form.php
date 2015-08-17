@@ -26,31 +26,12 @@
 				$form->labelEx($model,'salary_month');
 				?></td>
 			<td colspan="3">
-				<?php
-				$this->widget('zii.widgets.jui.CJuiDatePicker',array(
-					'model'=>$model,
-					'language'=>'zh_cn',
-					'name'=>'salary_month',
-					'attribute'=>'salary_month',
+				<?php $this->widget('ext.my97DatePicker.JMy97DatePicker',array(
+					'name'=>CHtml::activeName($model,'salary_month'),
 					'value'=>Date('Y-m'),
-					'options'=>array(
-						'showAnim'=>'fold',
-						'showOn'=>'both',
-						'buttonImage'=>Yii::app()->request->baseUrl.'/images/calendar.gif',
-						'maxDate'=>'new Date()',
-						'buttonImageOnly'=>true,
-						'changeMonth'=> true,
-						'changeYear'=> true,
-						'dateFormat'=>'yy-mm',
-						''
-					),
-					'htmlOptions'=>array(
-						'style'=>'height:18px',
-						'maxlength'=>8,
-						'readonly'=>"readonly",
-					),
-				));
-				?>
+					'options'=>array('dateFmt'=>'yyyy-MM','maxDate'=>'%y-%M','readOnly'=>true),
+					'htmlOptions'=>array('class'=>'Wdate'),
+				));?>
 				<?php echo $form->error($model,'salary_month'); ?>
 			</td>
 		</tr>
